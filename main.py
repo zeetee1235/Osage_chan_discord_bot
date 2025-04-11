@@ -16,8 +16,8 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 # Constants
 SPECIFIC_USER_ID = 123456789012345678  # Replace with the authorized user's Discord ID
 TTS_OUTPUT_FILE = "tts.wav"
-GGUF_MODEL_PATH = "/home/dev/mia_chan/model/Llama-OuteTTS-1.0-1B-Q4_K_M.gguf"  # Replace with your .gguf file name
-VOICE_FOLDER = "/home/dev/mia_chan/voice/"  # Folder for voice sample files
+GGUF_MODEL_PATH = "/home/dev/osage_chan/model/Llama-OuteTTS-1.0-1B-Q4_K_M.gguf"  # Replace with your .gguf file name
+VOICE_FOLDER = "/home/dev/osage_chan/voice/"  # Folder for voice sample files
 SPECIFIC_CHANNEL_ID = 987654321098765432  # Replace with the target text channel's ID
 
 @bot.event
