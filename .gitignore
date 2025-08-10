@@ -1,0 +1,5 @@
+.venv
+model/Llama-OuteTTS-0.2-500M-Q2_K.gguf
+whisper
+config.json
+.env
