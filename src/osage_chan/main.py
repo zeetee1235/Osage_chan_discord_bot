@@ -14,7 +14,7 @@ from osage_chan.hangul import spell_any_korean
 load_dotenv()
 ALLOWED_USER_IDS = [int(uid) for uid in os.getenv("특정유저", "").split(",") if uid]
 TTS_OUTPUT_FILE = "./voice/tts.wav"
-SPECIFIC_CHANNEL_ID = int(os.getenv("특정채널", "0"))
+SPECIFIC_CHANNEL_IDS = [int(cid) for cid in os.getenv("특정채널", "").split(",") if cid]
 BOT_TOKEN = os.getenv("봇토큰")
 
 # 추가: 봇 인텐트 설정
@@ -87,7 +87,7 @@ async def on_message(message):
     if message.content.startswith("!"):
         await bot.process_commands(message)
         return
-    if message.author.id in ALLOWED_USER_IDS and message.channel.id == SPECIFIC_CHANNEL_ID:
+    if message.author.id in ALLOWED_USER_IDS and message.channel.id in SPECIFIC_CHANNEL_IDS:
         await tts(message)
         # 메시지 작성자의 음성 채널 확인 및 봇 이동 처리
         if message.author.voice and message.author.voice.channel:
