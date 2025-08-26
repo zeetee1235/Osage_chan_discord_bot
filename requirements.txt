@@ -1,3 +1,4 @@
 discord.py
+discord.py
 edge-tts
 yt-dlp
