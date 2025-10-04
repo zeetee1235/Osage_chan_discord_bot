@@ -73,15 +73,38 @@ chmod +x run.sh
 
 ## 폴더 구조
 
-- `/home/dev/osage_chan_github/main.py`: 봇의 주요 소스코드 파일.
-- `/home/dev/osage_chan_github/README.md`: 이 파일.
-- `voice/`: TTS 및 음악 재생에 사용되는 임시 음성 파일들이 저장되는 폴더.
+```
+Osage_chan_discord_bot/
+├── src/
+│   └── osage_chan/
+│       ├── __init__.py
+│       ├── main.py          # 봇의 메인 소스코드
+│       └── hangul.py        # 한글 발음 변환 모듈
+├── voice/                   # TTS 및 음악 파일 저장 폴더
+├── .env                     # 환경변수 설정 파일
+├── requirements.txt         # Python 패키지 목록
+├── setup.sh                 # 환경 설정 스크립트
+├── run.sh                   # 봇 실행 스크립트
+└── README.md               # 이 파일
+```
 
 ---
 
-## 참고
+## 참고사항
 
-- 보다 많은 설정과 커스터마이징 옵션은 코드 내 주석을 참고해 주세요.
-- 오류 발생 시, 터미널의 출력 로그를 확인하거나 Discord 개발자 포털의 가이드 문서를 참조하시기 바랍니다.
+- **ffmpeg 필요**: 음성 파일 변환을 위해 ffmpeg가 시스템에 설치되어 있어야 합니다
+- **Discord 봇 토큰**: Discord Developer Portal에서 봇을 생성하고 토큰을 발급받아야 합니다
+- **사용자/채널 ID**: Discord에서 개발자 모드를 활성화하여 ID를 복사할 수 있습니다
+
+## 문제 해결
+
+### 봇이 시작되지 않는 경우
+1. `.env` 파일의 봇토큰이 올바른지 확인
+2. 환경변수에 따옴표가 없는지 확인
+3. python-dotenv가 설치되어 있는지 확인
+
+### TTS가 작동하지 않는 경우
+1. 사용자 ID와 채널 ID가 올바르게 설정되었는지 확인
+2. 봇이 음성 채널에 접속할 권한이 있는지 확인
 
 Happy Coding!
