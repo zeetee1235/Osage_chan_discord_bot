@@ -1,6 +1,5 @@
 PyNaCl
 discord.py
-discord.py
 edge-tts
 yt-dlp
-uv pip install -r requirements.txt
+python-dotenv
