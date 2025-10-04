@@ -18,6 +18,7 @@ cd /home/dev/Osage_chan_discord_bot
 /home/dev/Osage_chan_discord_bot/.venv/bin/python src/osage_chan/main.py
 
 # 방법 2: run.sh 스크립트 사용
+chmod +x run.sh
 ./run.sh
 
 # 방법 3: 가상환경 활성화 후 실행
