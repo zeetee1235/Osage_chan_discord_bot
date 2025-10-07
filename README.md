@@ -107,4 +107,4 @@ Osage_chan_discord_bot/
 1. 사용자 ID와 채널 ID가 올바르게 설정되었는지 확인
 2. 봇이 음성 채널에 접속할 권한이 있는지 확인
 
-Happy Coding!
+으헤~
