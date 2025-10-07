@@ -4,3 +4,4 @@ whisper
 config.json
 .env
 .uv
+voice
